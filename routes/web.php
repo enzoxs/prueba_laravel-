@@ -24,3 +24,17 @@ Route::get('hola', function() {
 Route::get('usuarios/{nombre}/{id}', function($nombre , $id  ) {
     return 'Este es el usuario '. $nombre. ' su id es '. $id;
 });
+
+Route::get('cursos', function(){
+
+    $nombre ='Etzio';
+    $datos= array(
+        'curso1' => 'JavaScript',
+        'curso2' => 'Java',
+        'curso3' => 'PHP'
+
+    );
+
+    return view('tutoriales.cursos')->with('datos', $datos);
+
+});
