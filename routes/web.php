@@ -25,6 +25,8 @@ Route::get('usuarios/{nombre}/{id}', function($nombre , $id  ) {
     return 'Este es el usuario '. $nombre. ' su id es '. $id;
 });
 
+
+
 Route::get('cursos', function(){
 
     $nombre ='Etzio';
