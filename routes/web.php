@@ -40,3 +40,20 @@ Route::get('cursos', function(){
     return view('tutoriales.cursos')->with('datos', $datos);
 
 });
+
+
+Route::get('cliente', function () {
+    $cliente = App\Cliente::find(2);
+    echo $cliente->nombre;
+});
+
+
+Route::get('cliente/{id}', function ($id) {
+    $cliente = App\Cliente::find($id);
+    echo $cliente->nombre;
+});
+
+Route::get('cliente_nombre', function () {
+    $cliente = App\Cliente::where('nombre','=','Mario')->first();
+    echo $cliente->id;
+});
